@@ -1,0 +1,47 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:base",
+        "group:all"
+    ],
+    "hostRules": [
+        {
+            "matchHost": "https://gitlab.dummyhost.com/api/v4/packages/npm/",
+            "encrypted": {
+                "token": "wcFMAxpdrJcZtb4IAQ//T47/jCPjpuoabKN6CzWqFNT8IEWRhHQnLTIIbb1JUYXoSiY1FYVaWKj1625GzsBUtEIRDfSejk7AfNn/EcaDCsTU+6T924DhRi3+qy7Spqf+GBhLepj3AGOry1HD+4iUR/wy3VgesnL03Yv8bQXhCYFISa+yPavKMAfJv0MkehXevsd6OGSMajKnkFkyh1ueALMR9c0jksRRLhDfRrAYAY2UZbShlDnPAX29lha2aqMBTaiidTLZsVUc9WT29AvkN/EbqRzJ8+dAcn9lGaqUTOdjiX6aF7MisH9P+OYy6T+Orywyt8BCacQnSyGQBvD9rYeNvMD7Wv7x/DN++uovTYyRVStADcb0EGsBWa+NjPdlGxpCMpe5Ud8RASJvDEBQIgI5WiuQbDXWYxEi9vIIdKO45R9BdKRDgYhMmrPZ1F0hBHoigcuPjNJGh2SLvkCKDUsMP4TrTaOn2gQPNcEJHQIlnqDb5ENEroHhF8HTwPXpDBsbzKlKDDl9opvXWxc0Y36UOXBLbsRVT/lvazEf2hft5f/24La4x8H5nq30Y+mGmmkH1vfcbZyoTS0cs+O8D1Th3nXLL/LJ7Q5L+T00CC+PjjM3VfVppSZ3xBX4dvxeDYGrNSmMpql5+rZWcFrJzbdlHnHj9kuqAIAd2DhRqmzM+spxUNnAZrQ+Ut1TilDSZgHHKFrAQwNDN8BmRY6KSoHBXrLS0ON/ovGUUdUrw4qKjLxryAYIf75mp7UjT5+gMz5IAfz36DyMhcsmX/9KX8umgqZzvAgv9RZN6RTAxs7yp2rr9AXNHKdVXMflyeMPU9CDvGb9Mg"
+            },
+            "description": "NPM token for Qstruct and Apollo Prometheus Exporter"
+        }
+    ],
+    "env": {
+        "encrypted": {
+            "NPM_AUTH_TOKEN": "wcFMAxpdrJcZtb4IAQ//cayU6T/K0F4+tF3TRXikZgEWOYzMk2VDDES2vxKvPNsaP9zGkbdwXaN0ltf93Bir/b2qwH48ZLdU5EOEhpjoVgcVPpYMlLv8MPJitZUU0qTqRdtS9rSZZwtI7khadNuFOZ01MpgtINib3oiz1+AhRDF0sWKwSfv4DcyxBpB2IHuBTbRr8MhIjpIWht8QxB3wKb8JA7maSz/b9ay1Cy14MUd8YZKbLZDPbgVFxwpCK6HSIbf7ImoBSOg9LHnaw3i7EG7BjYbUEmjvlPJymDDXqdDo7l8QMFTntST3/CqSRgoLVE1ncdFBqR4o+0iadb11WFhKAp+PV26P4XEYwn7ZNO0vYD/bn5v8SHaRiBXCLCherFCA4LI3ZS0aklF8wU1Pj+uS8CGIN4Og5HGWBkAWZgydgzHhVACH06p/FBehbEfcAfnndm82TpqVdDRYV4FFeAR5PVIa7RhSOKkJtNt+mCYbDUCqvN8VAmragKq/YP7ZWVZsVJH2Ub320nnuNaLp/Z26gjhJf1kGLbW8M+uw7qKuodULNdqGQuWulC3FKyvaLmqaHhvLPBJ8ANUWx/nCfzPHEOJhppnhmh6qwBjUMel2W2vzlQWk89rFRRV2G/gGNddxpubOBAgGXEG47lGjFhgZwMRPdh3loEYK3MffJkgM2158ffsJuM3UMwsCpVHSZgET+HN5v0C78NzbRZ2WVBUfE2f84Eri2BX8eXa7imTNP4gwLL4lqFQ21n3ruinylpAQHvzxfGNVXWf3gP6+pyH+FEvWB2zqRgFoDWyVeletaspZBENd2fLMpU9z9rauP8LLLQ01PA"
+        }
+    },
+    "packageRules": [
+        {
+            "groupName": "all non-major dependencies",
+            "groupSlug": "all-minor-patch",
+            "matchPackagePatterns": [
+                "*"
+            ],
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ]
+        },
+        {
+            "groupName": "all major dependencies",
+            "groupSlug": "all-major",
+            "matchPackagePatterns": [
+                "*"
+            ],
+            "matchUpdateTypes": [
+                "major"
+            ]
+        }
+    ],
+    "schedule": [
+        "every weekday"
+    ]
+}
